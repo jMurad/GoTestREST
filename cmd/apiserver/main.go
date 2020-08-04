@@ -4,7 +4,8 @@ import (
 	"flag"
 	"log"
 
-	"github.com/JMurad/gotestrest/internal/app/apiserver"
+	"github.com/BurntSushi/toml"
+	"github.com/jMurad/GoTestREST/internal/app/apiserver"
 )
 
 var (
