@@ -22,9 +22,9 @@ func (s *APIServer) Start() error {
 		return err
 	}
 
-	return nil
-
 	s.logger.Info("starting api server")
+
+	return nil
 }
 
 // ff
