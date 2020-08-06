@@ -8,14 +8,12 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// APIServer ...
 type APIServer struct {
 	config *Config
 	logger *logrus.Logger
 	router *mux.Router
 }
 
-// New ...
 func New(config *Config) *APIServer {
 	return &APIServer{
 		config: config,
@@ -24,7 +22,6 @@ func New(config *Config) *APIServer {
 	}
 }
 
-// Start ...
 func (s *APIServer) Start() error {
 	if err := s.configureLogger(); err != nil {
 		return err
@@ -37,7 +34,6 @@ func (s *APIServer) Start() error {
 	return http.ListenAndServe(s.config.BindAddr, s.router)
 }
 
-// configure Logger ...
 func (s *APIServer) configureLogger() error {
 	level, err := logrus.ParseLevel(s.config.LogLevel)
 	if err != nil {
