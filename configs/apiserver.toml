@@ -2,4 +2,4 @@ bind_addr = ":8080"
 log_level = "debug"
 
 [store]
-database_url = "host=localhost dbname=testdb sslmode=disable"
+database_url = "host=localhost dbname=testdb user=murad password=19a692d27c2660f1898df0b6f5d7de31 sslmode=disable"
